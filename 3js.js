@@ -1,5 +1,5 @@
 import * as THREE from './build/three.module.js'; // Adjust the path as needed
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; //importing OrbitControls
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls'; //importing OrbitControls
 import * as dat from 'dat.gui'; //importing dat.gui
 
 import img1 from './img/say_something.png';
