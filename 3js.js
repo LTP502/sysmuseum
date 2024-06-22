@@ -4,7 +4,7 @@ import * as dat from 'dat.gui'; //importing dat.gui
 
 import img1 from './img/say_something.png';
 import img2 from './img/drake_no.png';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from './three/three.module/jsm/loaders/GLTFLoader.js';
 import * as BufferGeometryUtils from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
 /* ---------------------------- Creating Renderer ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
