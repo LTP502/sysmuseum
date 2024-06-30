@@ -22,6 +22,7 @@ const roomSelect = document.getElementById('roomSelect');
 const objectSelect = document.getElementById('objectSelect');
 const objectDescription = document.getElementById('objectDescription');
 const infoCheckbox = document.getElementById('infoCheckbox');
+const checkboxContainer = document.querySelector('.checkbox-container');
 const infoContainer = document.querySelector('.info-container');
 
 let selectedObject = ""; // Variable to store selected object
@@ -75,10 +76,10 @@ objectSelect.addEventListener('change', () => {
 infoCheckbox.addEventListener('change', () => {
     if (infoCheckbox.checked) {
         displayObjectDescription();
-
+        checkboxContainer.style.backgroundColor = '#744c24';
     } else {
         resetObjectDescription();
-        
+        checkboxContainer.style.backgroundColor = '#d4a373';
         infoContainer.style.display = 'none';
     }
 });

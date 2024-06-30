@@ -136,21 +136,18 @@ table img {
     display: none;
 }
 
+.checkbox-container {
+    background-color: #d4a373; /* Background color */
+    border: 2px solid transparent; /* Initially transparent border */
+    border-radius: 5px;
+}
+
 /* Style the label */
 .checkbox-container label {
     display: block;
     padding: 10px 20px;
-    border: 2px solid transparent; /* Initially transparent border */
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #d4a373; /* Background color */
-    color: black; /* Text color */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
-}
+    color: black; /* Text color */ 
 
-/* Hover effect for the label */
-.checkbox-container label:hover {
-    border-color: black; /* Change border color on hover */
 }
 
 /* Overlay for progress bar */
@@ -195,26 +192,19 @@ table img {
 
 /* image container styling */
 .info-container {
-    border: 2px solid #ccc;
-    border-radius: 20px;
     padding: 20px;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    transition: border 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-}
-
-.info-container:hover {
-    border-color: #4b3e32;
-    border-radius: 10px;
+    color: #4b3e32;
+    font-weight: 1000;
 }
 
 .object-description {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
+    font-weight: 1000;
 }
 
 /* Media query for desktop view */
