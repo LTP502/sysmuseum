@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -20,31 +19,48 @@
 
     <div id="menu" class="menu">
         <ul>
-            <li><button onclick="location.href='home.php'">Home</button></li>
-            <li><button onclick="location.href='3Dm_sections.html'">About</button></li>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='sections.html'">About</button></li>
             <li><button onclick="location.href='services.php'">Services</button></li>
             <li><button onclick="location.href='contact.php'">Contact</button></li>
         </ul>
     </div>
-
-    <div class="carousel-container">
-        <div class="carousel">
-            <img src="img/drake_no.png" alt="Image 1">
-            <img src="img/say_something.png" alt="Image 2">
-            <img src="img/cap.png" alt="Image 3">
+    <center>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="img/meeting_area_1.jpg" alt="Image 1">
+                <img src="img/courtyard_1.jpg" alt="Image 2">
+                <img src="img/kitchen_1.jpg" alt="Image 3">
+            </div>
         </div>
-    </div>
+    </center>
 
     <div class="button-container">
         <button onclick="location.href='sections.html'">3D Museum Explorer</button>
-        <button onclick="location.href='#page2'">Page 2</button>
-        <button onclick="location.href='#page3'">Page 3</button>
+        <button onclick="location.href='test.html'">Test</button>
+        <button onclick="location.href='sections1.html'">Old 3D explorer</button>
     </div>
 
-    <div id="container3D" class="container"></div>
-
     
-    <script src="script.js" type="module"></script>
-    <script src="3js.js" type="module"></script>
+
+    <!-- Script to handle navbar menu -->
+    <script src="menu.js" type="module"></script>
+
+    <!-- Script to show next image -->
+    <!-- Add more images as needed -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+
+    </script>
 </body>
 </html>

@@ -1,29 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-
     <title>3D Explorer - Sections</title>
+    <link rel="stylesheet" href="sections.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <td><a href="home.php" style="display:block; width:100%; height:100%; background-color: red; color: white; text-decoration: none;"></a></td>
-            <td><a href="about.php" style="display:block; width:100%; height:100%; background-color: blue; color: white; text-decoration: none;"></a></td>
-        </tr>
-        <tr>
-            <td><a href="services.php" style="display:block; width:100%; height:100%; background-color: green; color: white; text-decoration: none;"></a></td>
-            <td><a href="contact.php" style="display:block; width:100%; height:100%; background-color: yellow; color: black; text-decoration: none;"></a></td>
-        </tr>
-        <tr>
-            <td><a href="page2.html" style="display:block; width:100%; height:100%; background-color: orange; color: black; text-decoration: none;"></a></td>
-            <td><a href="page3.html" style="display:block; width:100%; height:100%; background-color: purple; color: white; text-decoration: none;"></a></td>
-        </tr>
-        <tr>
-            <td><a href="page4.html" style="display:block; width:100%; height:100%; background-color: pink; color: white; text-decoration: none;"></a></td>
-            <td><a href="page5.html" style="display:block; width:100%; height:100%; background-color: gray; color: white; text-decoration: none;"></a></td>
-        </tr>
-    </table>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/sysm_logo.png" alt="Sun Yat Sen">
+            </div>
+            <button id="menuButton">Menu</button>
+        </nav>
+    </header>
+
+    <div id="menu" class="menu">
+        <ul>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='sections.html'">About</button></li>
+            <li><button onclick="location.href='services.php'">Services</button></li>
+            <li><button onclick="location.href='contact.php'">Contact</button></li>
+        </ul>
+    </div>
+
+    <center>
+        <h1>Explore The Peranakan Heritage</h1>
+        <table>
+            <tr>
+                <td class="S1">
+                    <h2>Room Layouts</h2>
+                    <img src="img/M_Layout.png" alt="Layout">
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <div class="combo-container">
+        <div>
+            <label for="roomSelect">Select Room:</label>
+            <br>
+            <select id="roomSelect">
+                <option value="entrance">Entrance</option>
+                <option value="drawing-room">Drawing Room</option>
+                <option value="meeting-hall">Meeting Hall</option>
+                <option value="mid-section">Mid Section</option>
+                <option value="open-area">Open Area</option>
+                <option value="kitchen">Kitchen</option>
+                
+            </select>
+        </div>
+        <br>
+        <h2 id="objectSelectHeader">Select Object:</h2> <!-- Moved the section header here -->
+        <div>
+            <label for="objectSelect">Select Object:</label>
+            <br>
+            <select id="objectSelect"></select>
+        </div>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="infoCheckbox">
+            <label for="infoCheckbox">Object Info</label>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <label class="progress-label" for="progress-bar">Loading 3D Explorer</label>
+        <br>
+        <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+
+    <!-- Info container -->
+    <div class="info-container">
+        <div id="objectDescription" class="object-description">
+            <!-- Object descriptions will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <!-- 3D container -->
+    <div id="container3D" class="container3D"></div>
+
+    
+
+<!-- ----------------------------SCRIPTS------------------------------- -->
+
+    <!-- Three.js import map for 3D environment -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+            }
+        }
+      </script>
+
+    <!-- GSAP library for camera movements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Script to load 3D -->
+    <script src="3js3.js" type="module"></script>
+
+    <!-- Script for menu bar functions -->
+    <script src="menu.js" type="module"></script>
+
+    <!-- Script to pick rooms and objects -->
+    <script src="sections.js" type="module"></script>
+
+    <!-- Scroll down to object selection section when room is selected -->
+    <script>
+        // Scroll down to object selection section when room is selected
+        const roomSelect = document.getElementById('roomSelect');
+        const objectSelectHeader = document.getElementById('objectSelectHeader');
+
+        roomSelect.addEventListener('change', () => {
+            objectSelectHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    </script>
 </body>
+</html>

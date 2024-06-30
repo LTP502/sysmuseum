@@ -87,23 +87,32 @@ body {
 }
 
 .carousel-container {
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     position: relative;
-    height: 50vh;
+    height: auto;
+    max-height: 40vh;
+    padding-bottom: 30%;
     background-color: #4b3e32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    margin-top: 100px;
+
 }
 
 .carousel img {
-    width: 100%;
-    flex-shrink: 0;
-    height: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
 }
+
 
 .button-container {
     display: flex;
@@ -119,17 +128,6 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-}
- 
-.container {
-    width: 70vw; /* Ensure full width of parent */
-    height: 50vh; /* Adjust height as needed */
-    max-width: 70vw; /* Ensure it doesn't overflow parent */
-    padding: 20px;
-    background-color: #fff;
-    position: relative;
-    margin: auto; /* Center horizontally if needed */
-    overflow: hidden; /* Ensure no overflow beyond dimensions */
 }
 
 
