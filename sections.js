@@ -11,6 +11,9 @@ const roomObjects = {
 // Descriptions for objects
 const descriptions = {
 
+    //Pick an object description
+    "Please Choose": "Please choose an object from the 'Select Object' dropdown.",
+
     //Drawing room descriptions
     "Chairs": "These are comfortable chairs suitable for any seating area.",
     "Tables": "Sturdy tables that can be used for dining or working.",
@@ -51,6 +54,7 @@ const objectDescription = document.getElementById('objectDescription');
 const infoCheckbox = document.getElementById('infoCheckbox');
 const checkboxContainer = document.querySelector('.checkbox-container');
 const infoContainer = document.querySelector('.info-container');
+const container3D = document.querySelector('.container3D');
 
 let selectedObject = ""; // Variable to store selected object
 // Function to update object options based on selected room
@@ -67,9 +71,6 @@ function updateObjectOptions(selectedRoom) {
         option.value = object;
         objectSelect.add(option);
     });
-
-    // Update header text dynamically
-    objectSelectHeader.textContent = `Select Object for the ${selectedRoom}`;
 }
 
 // Event listener for room select change
@@ -77,7 +78,8 @@ roomSelect.addEventListener('change', () => {
     const selectedRoom = roomSelect.value;
     updateObjectOptions(selectedRoom);
     resetObjectDescription();
-    objectSelectHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    container3D.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 // Event listener for button clicks
@@ -92,7 +94,7 @@ roomButtons.forEach(button => {
         roomSelect.value = selectedRoom;
 
         // Scroll to object selection
-        objectSelectHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        container3D.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 

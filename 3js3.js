@@ -36,13 +36,13 @@ camera.lookAt(0, 0, 0);
 //ambient light
 const ambientLight = new THREE.AmbientLight(0xffffff); //creating ambient light
 scene.add(ambientLight);
-ambientLight.intensity = 0.5; // Set intensity of ambient light
+ambientLight.intensity = 1; // Set intensity of ambient light
 
 
 //direcional light
-const directionalLight = new THREE.DirectionalLight(0xffffff, 2); //creating directional light
+const directionalLight = new THREE.DirectionalLight(0xffffff, 5); //creating directional light
 scene.add(directionalLight);
-directionalLight.position.set(30, 50, 0);
+directionalLight.position.set(0, 50, 100);
 directionalLight.castShadow = true;
 
 
@@ -54,18 +54,11 @@ directionalLight.shadow.camera.right = 50;
 directionalLight.shadow.camera.far = 100;
 directionalLight.shadow.camera.near = 0;
 
-//directional light helper
+/*directional light helper
 const dLightHelper = new THREE.DirectionalLightHelper(directionalLight); //creating directional light helper
 scene.add(dLightHelper); //to see the light source
-
-/*import orbit camera controls
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.05;
-controls.minDistance = 5;
-controls.maxDistance = 50;
-controls.maxPolarAngle = Math.PI / 2;
 */
+
 
 /* ---------------------------- Importing 3D models ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 //put models here
@@ -74,11 +67,11 @@ const models = [
     //innitial model
 
     {
-        url: 'models/pick.gltf', position: new THREE.Vector3(-3.75, 2, 0), //adjust placement X,Y,Z here
+        url: 'models/pick.glb', position: new THREE.Vector3(0, 0, 0), //adjust placement X,Y,Z here
         scale: new THREE.Vector3(0.05, 0.05, 0.05),
-        name: 'Pick a model',
+        name: 'Please Choose',
         rotation: new THREE.Euler(0, 0, 0),
-        color: 0xd4a373
+        color: 0xf9f9f9
     },
 
     //Entrance
@@ -96,7 +89,7 @@ const models = [
 
     {
         url: 'models/safe.glb', position: new THREE.Vector3(20, -20, 0), 
-        scale: new THREE.Vector3(3, 3, 3),
+        scale: new THREE.Vector3(5, 5, 5),
         name: 'The Safe',
         rotation: new THREE.Euler(0, 0, 0)
     },
@@ -105,7 +98,7 @@ const models = [
 
     {
         url: 'models/table.glb', position: new THREE.Vector3(-20, -20, 0), 
-        scale: new THREE.Vector3(5, 5, 5),
+        scale: new THREE.Vector3(7, 7, 7),
         name: 'Tables',
         rotation: new THREE.Euler(0, 0, 0)
     },
@@ -115,22 +108,16 @@ const models = [
     //Kitchen
     
     {
+        //kettle
         url: 'models/scene.gltf', position: new THREE.Vector3(-40, 0, 0),
-        scale: new THREE.Vector3(14, 14, 14),
+        scale: new THREE.Vector3(20, 20, 20),
         name: 'Metal Pots & Pans',
         rotation: new THREE.Euler(0, 0, 0)
     }, 
 
     {
-        url: 'models/weihan_model.glb', position: new THREE.Vector3(40, 0, 0), 
-        scale: new THREE.Vector3(5, 5, 5),
-        name: 'Wei Han',
-        rotation: new THREE.Euler(0, 0, 0)
-    },
-
-    {
         url: 'models/baskets.glb', position: new THREE.Vector3(0, 20, 0), 
-        scale: new THREE.Vector3(14, 14, 14),
+        scale: new THREE.Vector3(25, 25, 25),
         name: 'Baskets',
         rotation: new THREE.Euler(0, 0, 0)
     },
@@ -189,23 +176,9 @@ function animate() {
     renderer.render(scene, camera); //adding scene and camera to renderer
 }
 
-/* ---------------------------- Parallax Animation (not using) ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-let oldx = 0
-let oldy = 0
-container.onmousemove = function(ev){
-    let changex = ev.x - oldx
-    let changey = ev.y - oldy
-    camera.position.x += changex/100
-    camera.position.y -= changey/100
-
-    oldx = ev.x
-    oldy = ev.y
-}
-*/
-
 /* ---------------------------- Function for moving the cam when the user clicks on an object ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 //varaibles for the moving camera animation
-const cameraDuration = 1.5;
+const cameraDuration = 0.5;
 const tl = gsap.timeline();
 var previousModelPosition = new THREE.Vector3(); // Store the previous model's position
 
@@ -218,21 +191,19 @@ function moveCamToObject(objectName) {
         tl.to(camera.position, {
             duration: cameraDuration,
             ease: "power3.inOut",
+            x: previousModelPosition.x,
             y: previousModelPosition.y,
             z: 12,
 
             onStart: function () {
-                // Stop the model from spinning on start of the animation
-                gsap.killTweensOf(model.rotation);
                 
                 infoCheckboxContainer.style.display = 'none';
             },
-
+            
             onUpdate: function () {
                 // During zoom-out, keep looking at the previous model
                 camera.lookAt(previousModelPosition);
             },
-            
         });
 
         // Phase 2: Move camera to the target model
@@ -248,6 +219,7 @@ function moveCamToObject(objectName) {
         tl.to(camera.position, {
             duration: cameraDuration,
             ease: "power3.inOut",
+            x: targetPosition.x,
             y: targetPosition.y + 3,
             z: 7,
             onUpdate: function () {
@@ -258,20 +230,19 @@ function moveCamToObject(objectName) {
                 previousModelPosition.copy(model.position);
             },
             onComplete: function () {
-
-                // Make the model start spinning slowly
                 gsap.to(model.rotation, {
-                    duration: 5,
-                    ease: "power1.inOut",
-                    y: "+=6.28",
-                    repeat: -1,
-                    yoyo: true
+                    duration: 10, // Adjust duration to control the speed of rotation
+                    ease: "none", // Linear easing for constant speed
+                    y: "+=6.28", // Rotate by 2*pi (full circle) in the positive direction
+                    repeat: -1, // Repeat indefinitely
                 });
+                
 
                 infoCheckboxContainer.style.display = 'block';
             },
         });
 
+        
     } else {
         console.error(`Invalid object name: ${objectName}`);
     }
@@ -280,7 +251,7 @@ function moveCamToObject(objectName) {
 /* ---------------------------- Function to move the camera to the initial position when page loads ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 function initialMoveCam() {
     gsap.to(camera.position, { 
-        duration: 5, 
+        duration: 1, 
         ease: "power3.inOut",
         x: 0,
         y: 1.5, 
@@ -328,3 +299,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+// Event listener for room select change
+const roomSelect = document.getElementById('roomSelect');
+roomSelect.addEventListener('change', () => {
+    moveCamToObject("Please Choose")
+});
+
+// Event listener for button clicks
+const roomButtons = document.querySelectorAll('.room-button');
+roomButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        moveCamToObject("Please Choose")
+    });
+});
+

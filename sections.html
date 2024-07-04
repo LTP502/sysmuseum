@@ -81,18 +81,21 @@
                 
             </select>
         </div>
-        <br>
-        <h2 id="objectSelectHeader">Select Object:</h2> <!-- Moved the section header here -->
+        
         <div>
             <label for="objectSelect">Select Object:</label>
             <br>
             <select id="objectSelect"></select>
         </div>
 
-        <div class="checkbox-container">
-            <input type="checkbox" id="infoCheckbox">
-            <label for="infoCheckbox">Object Info</label>
-        </div>
+        
+    </div>
+
+    <!-- Insert object section header here-->
+
+    <div class="checkbox-container">
+        <input type="checkbox" id="infoCheckbox">
+        <label for="infoCheckbox">Object Info</label>
     </div>
 
     <div class="progress-bar-container">
@@ -143,16 +146,5 @@
 
     <!-- Script to pick rooms and objects -->
     <script src="sections.js" type="module"></script>
-
-    <!-- Scroll down to object selection section when room is selected -->
-    <script>
-        // Scroll down to object selection section when room is selected
-        const roomSelect = document.getElementById('roomSelect');
-        const objectSelectHeader = document.getElementById('objectSelectHeader');
-
-        roomSelect.addEventListener('change', () => {
-            objectSelectHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    </script>
 </body>
 </html>
