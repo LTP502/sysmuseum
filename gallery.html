@@ -5,9 +5,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Photo Gallery</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="lightbox.css">
 </head>
 <body>
     <header>
@@ -28,6 +29,82 @@
         </ul>
     </div>
 
+    <div class="container">
+        <h1 class="title">Photo Gallery</h1>
+
+        <div class="gallery">
+            <div class="column">
+                <div class="photo">
+                    <a href="img/meeting_area_1.jpg" data-lightbox="museum" data-title="Meeting Area1 1">
+                        <img src="img/meeting_area_1.jpg" alt="Image 1">
+                    </a>
+                </div>
+
+                <div class="photo">
+                    <a href="img/meeting_area_1.jpg" data-lightbox="museum" data-title="Meeting Area 2">
+                        <img src="img/meeting_area_1.jpg" alt="Image 2">
+                    </a>
+                </div>
+
+                <div class="photo">
+                    <a href="img/courtyard_1.jpg" data-lightbox="museum" data-title="Courtyard">
+                        <img src="img/courtyard_1.jpg" alt="">
+                    </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="photo">
+                    <a href="img/courtyard_2.jpg" data-lightbox="museum" data-title="Courtyard">
+                        <img src="img/courtyard_2.jpg" alt="">
+                    </a>
+                    
+                </div>
+
+                <div class="photo">
+                    <a href="img/courtyard_3.jpg" data-lightbox="museum" data-title="Courtyard">
+                        <img src="img/courtyard_3.jpg" alt="">
+                    </a>
+                    
+                </div>
+
+                <div class="photo">
+                    <a href="img/courtyard_4.jpg" data-lightbox="museum" data-title="Courtyard">
+                        <img src="img/courtyard_4.jpg" alt="">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="photo">
+                    <a href="img/courtyard_5.jpg" data-lightbox="museum" data-title="Courtyard">
+                        <img src="img/courtyard_5.jpg" alt="">
+                    </a>
+                    
+                </div>
+
+                <div class="photo">
+                    <a href="img/kitchen_1.jpg" data-lightbox="museum" data-title="Kitchen">
+                        <img src="img/kitchen_1.jpg" alt="">
+                    </a>
+                    
+                </div>
+
+                <div class="photo">
+                    <a href="img/pocket_watch_1.jpg" data-lightbox="museum" data-title="Pocket Watch">
+                        <img src="img/pocket_watch_1.jpg" alt="">
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
     <!-- Foooter -->
     <footer> 
         <div class="footer">
@@ -40,6 +117,9 @@
 
     <!-- Script to handle navbar menu -->
     <script src="menu.js" type="module"></script>
+
+    <!-- Script to handle picture navigator -->
+    <script src="lightbox-plus-jquery.min.js"></script>
 
 </body>
 </html>
