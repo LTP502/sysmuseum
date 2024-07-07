@@ -27,13 +27,13 @@ title {
 
 .gallery {
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
 }
 
 .photo img {
