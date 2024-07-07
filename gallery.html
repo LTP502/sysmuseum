@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/sysm_logo.png" alt="Sun Yat Sen">
+            </div>
+            <button id="menuButton">Menu</button>
+        </nav>
+    </header>
+
+    <div id="menu" class="menu">
+        <ul>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='sections.html'">3D Museum Explorer</button></li>
+            <li><button onclick="location.href='gallery.html'">Photo Gallery</button></li>
+            <li><button onclick="location.href='about.html'">About Us</button></li>
+        </ul>
+    </div>
+
+    <!-- Foooter -->
+    <footer> 
+        <div class="footer">
+            <p>&copy; 2023 Sun Yat Sen Museum. All rights reserved.</p>
+        </div> 
+        
+    </footer> 
+
+    <!-- ----------------------------SCRIPTS------------------------------- -->
+
+    <!-- Script to handle navbar menu -->
+    <script src="menu.js" type="module"></script>
+
+</body>
+</html>

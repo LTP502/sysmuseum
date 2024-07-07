@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css"> <!-- Link to correct CSS file -->
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        #container3D2 {
+            width: 100%;
+            height: 500px; /* Adjust the height as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/sysm_logo.png" alt="Sun Yat Sen">
+            </div>
+            <button id="menuButton">Menu</button>
+        </nav>
+    </header>
+
+    <div id="menu" class="menu">
+        <ul>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='sections.html'">3D Museum Explorer</button></li>
+            <li><button onclick="location.href='gallery.html'">Photo Gallery</button></li>
+            <li><button onclick="location.href='about.html'">About Us</button></li>
+        </ul>
+    </div>
+
+    <h1 class="title">About Us</h1>
+
+    <!-- 3D container for panorama view of environment -->
+    <div id="container3D2" class="container3D2"></div>
+
+    <!-- Footer -->
+    <footer> 
+        <div class="footer">
+            <p>&copy; 2023 Sun Yat Sen Museum. All rights reserved.</p>
+        </div> 
+    </footer> 
+
+    <!-- ----------------------------SCRIPTS------------------------------- -->
+
+    <!-- Three.js import map for 3D environment -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/",
+            "three/addons/RGBELoader.js": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/js/loaders/RGBELoader.js"
+        }
+    }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.js"></script>
+
+
+     <!-- Include PANOLENS library directly -->
+     <script src="panolens.min.js"></script>
+
+    <!-- Script to load 3D -->
+    <script src="about.js" type="module"></script>
+
+    <!-- Script to handle navbar menu -->
+    <script src="menu.js" type="module"></script>
+
+</body>
+</html>

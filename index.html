@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <header>
@@ -20,8 +22,9 @@
     <div id="menu" class="menu">
         <ul>
             <li><button onclick="location.href='index.html'">Home</button></li>
-            <li><button onclick="location.href='about.html'">About</button></li>
-            <li><button onclick="location.href='contact.php'">Contact</button></li>
+            <li><button onclick="location.href='sections.html'">3D Museum Explorer</button></li>
+            <li><button onclick="location.href='gallery.html'">Photo Gallery</button></li>
+            <li><button onclick="location.href='about.html'">About Us</button></li>
         </ul>
     </div>
 
@@ -39,14 +42,23 @@
 
     <div class="main">
         <h3>Sun Yat Sen Museum: Echoes of Revolution and Penang's Heritage</h3>
+
         <p>Unveil the compelling story of Dr. Sun Yat Sen, a pivotal figure in modern Chinese history, as you step through the gates of our museum. Discover his profound impact on Penang and his revolutionary vision that resonates to this day.</p>
     </div>
 
+    <!-- Container to hold the buttons that will lead to other pages -->
     <div class="button-container">
         <button onclick="location.href='sections.html'">3D Museum Explorer</button>
+        <button onclick="location.href='gallery.html'">Photo Gallery</button>
     </div>
 
-    
+    <!-- Foooter -->
+    <footer> 
+        <div class="footer">
+            <p>&copy; 2023 Sun Yat Sen Museum. All rights reserved.</p>
+        </div> 
+        
+    </footer>  
 
     <!-- Script to handle navbar menu -->
     <script src="menu.js" type="module"></script>
@@ -64,8 +76,10 @@
             document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
         }
 
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
+        setInterval(showNextImage, 5000); // Change image every 3 seconds
 
     </script>
+
+    
 </body>
 </html>

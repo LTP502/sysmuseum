@@ -5,87 +5,6 @@ body {
     color: #4b3e32;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    color: #fff;
-    border: 2px solid #4b3e32;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo img{
-    width: 80%;
-}
-
-#menuButton {
-    background-color: #d4a373;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.menu {
-    display: none;
-    background-color: #e6ccb2;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 1000;
-}
-
-.menu.show {
-    display: block;
-    opacity: 1;
-}
-
-.menu.hide {
-    opacity: 0;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    border: #4b3e32 3px solid;
-    border-top: none;
-}
-
-.menu li {
-    padding: 0px 10px;
-}
-
-.menu li button {
-    text-decoration: none;
-    color: #4b3e32;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 16px;
-    transition: font-size 0.2s ease-in-out;
-    width: 100%;
-    padding: 10px 10px;
-    text-align: end;
-    border-bottom: 1px solid #4b3e32;
-}
-
-.menu li button:hover {
-    font-size: 20px;
-}
-
 /* table and butttons */
 table {
     width: 30vw;
@@ -259,11 +178,21 @@ table button:hover {
     width: 90vw; /* Ensure full width of parent */
     height: 40vh; /* Adjust height as needed */
     max-width: 90vw; /* Ensure it doesn't overflow parent */
-    margin: 0 auto; /* Center horizontally */
+    place-items: center;
     padding: 10px;
     overflow: hidden;
-    position: relative; /* Ensure relative positioning */
-    right: 1ch;
+
+}
+
+/* Media query for phoone view */
+@media (min-width: 1024px) {
+    /* .container3D styling */
+    .container3D {
+        margin: 0 auto; 
+        position: relative; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* image container styling */
@@ -281,13 +210,5 @@ table button:hover {
     font-size: 20px;
     line-height: 1.6;
     font-weight: 1000;
-}
-
-/* Media query for desktop view */
-@media (max-width: 1024px) {
-
-    .menu {
-        width: 70%;
-        left: 15%;
-    }
+    text-align: center;
 }

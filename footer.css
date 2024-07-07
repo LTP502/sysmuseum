@@ -1,0 +1,11 @@
+.footer {
+    background-color: #4b3e32;
+    color: #f4f1e9;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

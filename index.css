@@ -5,91 +5,9 @@
 
 body {
     margin: 0;
-    font-family: Raleigh, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #ceb8a4;
     color: #f4f1e9;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    color: #fff;
-    border: 2px solid #4b3e32;
-    
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo img{
-    width: 80%;
-}
-
-#menuButton {
-    background-color: #d4a373;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.menu {
-    display: none;
-    background-color: #e6ccb2;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 1000;
-}
-
-.menu.show {
-    display: block;
-    opacity: 1;
-}
-
-.menu.hide {
-    opacity: 0;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    border: #4b3e32 3px solid;
-    border-top: none;
-}
-
-.menu li {
-    padding: 0px 10px;
-}
-
-.menu li button {
-    text-decoration: none;
-    color: #4b3e32;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 16px;
-    transition: font-size 0.2s ease-in-out;
-    width: 100%;
-    padding: 10px 10px;
-    text-align: end;
-    border-bottom: 1px solid #4b3e32;
-}
-
-.menu li button:hover {
-    font-size: 20px;
 }
 
 .title {
@@ -133,6 +51,20 @@ body {
     aspect-ratio: 3 / 4;
 }
 
+.main {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    text-align: center;
+}
+
+.main h3{
+    color: #4b3e32;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    font-family: Raleigh;
+}
+
 
 .button-container {
     display: flex;
@@ -149,18 +81,4 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-family: Raleigh;
-}
-
-
-/* Media query for desktop view */
-@media (min-width: 1024px) {
-    body {
-        width: 70vw;
-        margin: 0 auto;
-    }
-
-    .menu {
-        width: 70%;
-        left: 15%;
-    }
 }
