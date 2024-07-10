@@ -20,7 +20,7 @@ body {
 }
 
 .carousel-container {
-    width: 100%;
+    width: 45vw;
     overflow: hidden;
     position: relative;
     height: auto;
@@ -34,7 +34,6 @@ body {
     border-bottom: #4b3e32 5px solid;
     border-width: 1ch;
     border-radius: 30px;
-    
 }
 
 .carousel {
@@ -48,7 +47,6 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain; 
-    aspect-ratio: 3 / 4;
 }
 
 .main {
@@ -65,15 +63,12 @@ body {
     font-family: Raleigh;
 }
 
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 10px;
+.video-container video{
+    margin-top: 20px;
+    width: 70vw;
 }
 
-.button-container button {
+.button {
     background-color: #8b5e3c;
     color: #fff;
     border: none;
@@ -81,4 +76,18 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-family: Raleigh;
+    border-radius: 10px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 1024px) {
+    .carousel img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
 }

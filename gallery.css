@@ -14,6 +14,8 @@ body {
     width: 90%;
     margin: auto;
     padding : 40px 0;
+    height: 900px;
+    text-align: center;
 }
 
 title {
@@ -28,12 +30,14 @@ title {
 .gallery {
     display: flex;
     gap: 5px;
+    height: 900px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 33.33%;
 }
 
 .photo img {

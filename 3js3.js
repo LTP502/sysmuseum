@@ -68,7 +68,7 @@ const models = [
 
     {
         url: 'models/pick.glb', position: new THREE.Vector3(0, 0, 0), //adjust placement X,Y,Z here
-        scale: new THREE.Vector3(0.05, 0.05, 0.05),
+        scale: new THREE.Vector3(0.13, 0.13, 0.13),
         name: 'Please Choose',
         rotation: new THREE.Euler(0, 0, 0),
         color: 0xf9f9f9
@@ -76,7 +76,7 @@ const models = [
 
     //Entrance
 
-    //Drawing Room
+    //Front Hall
     
     {
         url: 'models/chair.glb', position: new THREE.Vector3(20, 20, 0), 
@@ -84,13 +84,34 @@ const models = [
         name: 'Chairs',
         rotation: new THREE.Euler(0, Math.PI / 2, 0)
     },
+
+    {
+        url: 'models/sys_sculpture.glb', position: new THREE.Vector3(20, 40, 0), 
+        scale: new THREE.Vector3(5, 5, 5),
+        name: 'Sculpture',
+        rotation: new THREE.Euler(0, 0, 0),
+    },
     
-    //Meeting Room
+    //Second Hall
 
     {
         url: 'models/safe.glb', position: new THREE.Vector3(20, -20, 0), 
         scale: new THREE.Vector3(5, 5, 5),
         name: 'The Safe',
+        rotation: new THREE.Euler(0, 0, 0)
+    },
+
+    {
+        url: 'models/lacquerware.glb', position: new THREE.Vector3(40, -40, 0), 
+        scale: new THREE.Vector3(6, 6, 6),
+        name: 'Lacquerware',
+        rotation: new THREE.Euler(0, 0, 0)
+    },
+
+    {
+        url: 'models/portrait.glb', position: new THREE.Vector3(20, -40, 0), 
+        scale: new THREE.Vector3(6, 6, 6),
+        name: 'Portraits',
         rotation: new THREE.Euler(0, 0, 0)
     },
 
@@ -117,7 +138,7 @@ const models = [
 
     {
         url: 'models/baskets.glb', position: new THREE.Vector3(0, 20, 0), 
-        scale: new THREE.Vector3(25, 25, 25),
+        scale: new THREE.Vector3(7, 7, 7),
         name: 'Baskets',
         rotation: new THREE.Euler(0, 0, 0)
     },

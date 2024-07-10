@@ -2,7 +2,7 @@
 const roomObjects = {
     entrance: ["Please Choose", "Entrance Design"],
     'drawing-room': ["Please Choose", "Chairs", "Tables", "Sculpture"],
-    'meeting-hall': ["Please Choose", "Portraits", "Meeting Table", "The Safe"],
+    'meeting-hall': ["Please Choose", "Portraits", "Meeting Table", "The Safe", "Lacquerware"],
     'mid-section': ["Please Choose", "Desk", "Chairs"],
     'open-area': ["Please Choose", "Toolbox", "Bicycle", "Car"],
     kitchen: ["Please Choose", "Clay Pots", "Metal Pots & Pans", "Baskets"]
@@ -17,14 +17,15 @@ const descriptions = {
     //Drawing room descriptions
     "Chairs": "These are comfortable chairs suitable for any seating area.",
     "Tables": "Sturdy tables that can be used for dining or working.",
-    "Sculpture": "An artistic sculpture that enhances the room's decor.",
+    "Sculpture": "Sun Yat Sen's own sculpture.",
 
 
     // meeting hall descriptions
 
-    "Portraits": "Portraits of famous figures.",
+    "Portraits": "Sun Yat Sen's wife's portrait.",
     "Meeting Table": "A table that can be used for meeting purposes.",
     "The Safe": "A safe that can be used for storing important documents.",
+    "Lacquerware": "Lacquerwares that can be used for decoration and storing items. Property of the previous house owners.",
 
     // mid section descriptions
 
@@ -41,8 +42,7 @@ const descriptions = {
 
     "Clay Pots": "Clay pots that can be used for decoration.",
     "Metal Pots & Pans": "Metal pots and pans that can be used for cooking.",
-    "Baskets": "Baskets that can be used for storage.",
-    "Battery": "A battery that can be used for powering electronic devices.",
+    "Baskets": "Baskets that can be used for storage. A property of the previous house owners.",
 };
 
 
