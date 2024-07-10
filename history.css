@@ -60,6 +60,14 @@ body {
     font-family: Raleigh;
 }
 
+.main h3{
+    color: #8d3c38;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+    font-family: Raleigh;
+}
+
 .main p {
     line-height: 1.5rem;
     text-align: justify;

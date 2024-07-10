@@ -37,11 +37,30 @@ body {
     font-size: 18px;
     font-weight: 600;
     margin-top: 20px;
-    font-family: Raleigh;
+    font-family: Raleigh, Arial, sans-serif;
     place-items: center;
     padding: 10px;
 }
 
 .info p{
     color: #251413;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Raleigh, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.button img{
+    width: 50px;
+    height: 50px;
 }

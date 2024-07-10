@@ -52,13 +52,21 @@
             Sun Yat Sen Museum Penang
             <br>
             120, Lbh Armenian, George Town, 10200, Penang, Malaysia
+            <br>
+            <button class="button" onclick="copyAddress()">
+                <img src="img/copy.png" alt="Copy Address">
+                Copy Address
+            </button>
+            
         </p>
 
         <br>
 
         <h3>Hours</h3>
         <p>
-            Opens daily from 10am - 5pm
+            Opens Daily
+            <br> 
+            10am - 5pm
         </p>
 
         <br>
@@ -93,6 +101,13 @@
     </footer> 
 
     <!-- ----------------------------SCRIPTS------------------------------- -->
+
+    <script>
+        function copyAddress() {
+            const address = "Sun Yat Sen Museum Penang, 120, Lbh Armenian, George Town, 10200, Penang, Malaysia";
+            navigator.clipboard.writeText(address);
+        }
+    </script>
 
     <!-- Three.js import map for 3D environment -->
     <script type="importmap">
