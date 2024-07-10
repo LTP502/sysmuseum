@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="history.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/sysm_logo.png" alt="Sun Yat Sen">
+            </div>
+            <button id="menuButton">Menu</button>
+        </nav>
+    </header>
+
+    <div id="menu" class="menu">
+        <ul>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='history.html'">History</button></li>
+            <li><button onclick="location.href='sections.html'">3D Museum Explorer</button></li>
+            <li><button onclick="location.href='gallery.html'">Photo Gallery</button></li>
+            <li><button onclick="location.href='about.html'">About Us</button></li>
+        </ul>
+    </div>
+
+    <h1 class="title">A Look Through The Museum's History</h1>
+
+    <div class="main">
+        <div class="card">
+            <img src="img/dr_sun.png" alt="Dr. Sun Yat Sen">
+    
+            <h3>A Link To World History</h3>
+            <p>
+                The historic city of George Town has been listed as a
+                world heritage site by UNESCO for its architectural
+                heritage and townscape, cultural diversity and
+                multilayered history, its living heritage communities
+                and intangible heritage. Immerse yourself in our
+                shared past. Discover how this important house pre-
+                eminently connects global and local history.
+
+                <br><br>
+
+                A permanent exhibition and guided tour offer a
+                window onto the extraordinary history of the house.
+                In 1910 Sun Yat Sen (1866-1925) moved the Southeast
+                Asian headquarters of the Tongmenghui party to
+                Penang because he found renewed support among the
+                Overseas Chinese here for the overthrow of China's
+                Qing dynasty. In the same year, when Sun Yat Sen
+                lived in Penang with his family for over four months,
+                the house at 120 Armenian Street was where:
+
+                <br><br>
+
+                <ul>
+                    <li>The Penang Philomatic Union - a reading club - was based, providing a cover for the Sun's political party.</li>
+                    <br>
+                    <li>The world's oldest Chinese newspaper Kwong Wah Yit Poh was founded by Sun Yat Sen in 1910.</li>
+                    <br>
+                    <li>Sun Yat Sen convened the celebrated Penang Conference and delivered his famous speech to plan the Huanghuagang Uprising, an important milestone leading to the Chinese revolution of 1911.</li>
+                </ul>
+            
+            </p>
+            
+        </div>
+
+        <div class="card">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="img/carousel_cut/part1.jpg" alt="Image 1">
+                    <img src="img/carousel_cut/part2.jpg" alt="Image 2">
+                    <img src="img/carousel_cut/part3.jpg" alt="Image 3">
+                    <img src="img/carousel_cut/part4.jpg" alt="Image 4">
+                </div>
+            </div>
+    
+            <h3>A Nanyang Architectural Gem</h3>
+            <p>
+                Built around 1880 as a residential
+                townhouse, the building is a very
+                fine example of a Straits
+                Settlements merchant's home.
+                Unusually long at over 130 feet
+                (40 metres) it retains many of its
+                original features - an intimate
+                courtyard garden, a handsome
+                timber staircase, geometric floor
+                tiles, and large beams spanning
+                lime plaster walls. The interior
+                displays original blackwood
+                Straits Chinese furniture and
+                ornately carved wooden screens.
+                The old-fashioned Nyonya kitchen
+                preserves the original firewood stove
+                and kitchen utensils.
+
+                <br><br>
+
+                From 1926 the house was owned by
+                a Hokkien merchant, Ch'ng Teong
+                Swee. His granddaughter, the writer
+                and heritage advocate, Khoo Salma
+                Nasution, is custodian of the house
+                today. In 2010-11 the house
+                underwent extensive renovation to
+                its façade and roof, drawing on the
+                time-honoured skills of craftsmen
+                from Quanzhou, southern China.
+            
+            </p>
+            
+            <h3>Want to check out the new look?</h3>
+            <button class="button" onclick="location.href='gallery.html'">Photo Gallery</button>
+
+        </div>
+
+        <div class="card">
+    
+            <h3>Famous International Visitors</h3>
+            <p>
+                The Sun Yat Sen Penang Base was
+                the first Sun Yat Sen museum in
+                Malaysia, launched by first former
+                Malaysian prime minister Dr
+                Mahathir Mohamad in 2001. The
+                following year, it was the first Sun
+                Yat Sen museum in southeast Asia
+                officially visited by President Hu
+                Jintao (then vice-president),
+                followed by other China officials
+                such as the chair of the National
+                Peoples' Congress, Wu Bangguo,
+                Other notable visits:
+
+                <br><br>
+
+                <ul>
+                    <li>The Penang reunion of 29 Sun clan members (directly descended from Sun Yat Sen and his brother Sun Mei) from all over the world.</li>
+                    <br>
+                    <li>Famous people in the arts - Peter Carey, Gurmit Singh and Petrina Fung Bo Bo</li>
+                    <br>
+                    <li>Filming location of the award-winning Chinese film Road To Dawn (2007), starring Winston Zhao and based on the story of Sun Yat Sen's revolutionary period in Penang.</li>
+                </ul>
+            
+            </p>
+            
+        </div>
+
+    </div>
+        
+
+    <!-- Foooter -->
+    <footer> 
+        <div class="footer">
+            <p>&copy; 2023 Sun Yat Sen Museum. All rights reserved.</p>
+        </div> 
+        
+    </footer>  
+
+    <!-- Script to handle navbar menu -->
+    <script src="menu.js" type="module"></script>
+
+    <!-- Script to show next image -->
+    <!-- Add more images as needed -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            const offset = -currentIndex * 100;
+            
+            // Reverse flow when reaching the last image
+            if (currentIndex === totalImages - 1) {
+                document.querySelector('.carousel').style.transition = "transform 3s linear";
+            } else {
+                document.querySelector('.carousel').style.transition = "transform 3s linear";
+            }
+
+            document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+
+    </script>
+
+    
+</body>
+</html>

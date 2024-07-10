@@ -6,7 +6,7 @@
     background-color: #ffffff;
     padding: 10px 20px;
     color: #fff;
-    border: 2px solid #4b3e32;
+    border: 2px solid #8d3c38;
     
 }
 
@@ -26,6 +26,8 @@
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    font-family: Raleigh, Arial, sans-serif;
+    
 }
 
 .menu {
@@ -55,7 +57,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    border: #4b3e32 3px solid;
+    border: #8d3c38 3px solid;
     border-top: none;
 }
 
@@ -65,7 +67,7 @@
 
 .menu li button {
     text-decoration: none;
-    color: #4b3e32;
+    color: #8d3c38;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -74,7 +76,9 @@
     width: 100%;
     padding: 10px 10px;
     text-align: end;
-    border-bottom: 1px solid #4b3e32;
+    border-bottom: 1px solid #8d3c38;
+    font-family: Raleigh, Arial, sans-serif;
+    font-weight: 800;
 }
 
 .menu li button:hover {
