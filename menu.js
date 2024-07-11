@@ -14,3 +14,4 @@ document.getElementById('menuButton').addEventListener('click', function() {
         }, 10); // Delay to trigger transition
     }
 });
+

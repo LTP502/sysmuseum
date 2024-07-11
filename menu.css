@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: Raleigh;
+    src:url(raleigh.ttf);
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,14 +25,14 @@
 }
 
 #menuButton {
-    background-color: #d4a373;
+    background-color: #8d3c38;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     font-family: Raleigh, Arial, sans-serif;
-    
+    border-radius: 5px;
 }
 
 .menu {
@@ -84,6 +89,62 @@
 .menu li button:hover {
     font-size: 20px;
 }
+
+/* ------------------------ Google translate styles ----------------------- */
+.translate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.translate h3{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-35%);
+
+    font-family: Raleigh, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #8d3c38;
+    margin-right: 10px;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+ }
+
+/* Hide the Google Translate frame */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.VIpgJd-ZVi9od-ORHb {
+    display: none !important;
+}
+
+/* Make sure the body does not shift up */
+body {
+    top: 0px !important; 
+}
+
+/* Style the dropdown */
+.goog-te-combo {
+    border: none;
+    border-bottom: #8d3c38 3px solid;
+    border-radius: 1px;
+    padding: 5px;
+    background-color: transparent;
+    color: #8d3c38;
+    font-family: Raleigh, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.goog-te-combo:hover {
+    border-color: #888;
+}
+
 
 /* Media query for desktop view */
 @media (min-width: 1024px) {

@@ -29,6 +29,12 @@
         </ul>
     </div>
 
+    <div class="translate">
+        <h3>Language</h3>
+        &nbsp;
+        <div id="google_translate_element"></div> 
+    </div>
+
     <h1 class="title">Journey Through Sun Yat Sen's Legacy</h1>
 
     <center>
@@ -101,7 +107,9 @@
             <p>&copy; 2023 Sun Yat Sen Museum. All rights reserved.</p>
         </div> 
         
-    </footer>  
+    </footer> 
+    
+    <!-- ----------------------------SCRIPTS------------------------------- -->
 
     <!-- Script to handle navbar menu -->
     <script src="menu.js" type="module"></script>
@@ -123,6 +131,20 @@
 
     </script>
 
+    <!-- Google translate script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+
+
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
     
 </body>
 </html>
