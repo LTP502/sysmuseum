@@ -8,3 +8,5 @@ const viewer = new PANOLENS.Viewer({
     controlBar: true,
 });
 viewer.add( panorama );
+
+

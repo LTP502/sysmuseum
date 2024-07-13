@@ -36,9 +36,21 @@
     </div>
 
     <h1 class="title">A Look Through The Museum's History</h1>
+    <hr width="100%" color="#8d3c38" size="5">
 
     <div class="main">
-        <div class="card">
+
+        <h3>Quick Select</h3>
+
+        <div class="section-button-container">
+            <button class="section-button" data-value="general">General History</button>
+            <button class="section-button" data-value="house">House History</button>
+            <button class="section-button" data-value="guest">Special House Guests</button>
+        </div>
+
+        <br>
+     
+        <div class="card" id="general">
             <img src="img/dr_sun.png" alt="Dr. Sun Yat Sen">
     
             <h3>A Link To World History</h3>
@@ -77,7 +89,7 @@
             
         </div>
 
-        <div class="card">
+        <div class="card" id="house">
             <div class="carousel-container">
                 <div class="carousel">
                     <img src="img/carousel_cut/part1.jpg" alt="Image 1">
@@ -127,7 +139,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card" id="guest">
 
             <img src="img/vice_president.png" alt="President Hu Jintao">
     
@@ -163,7 +175,7 @@
         </div>
 
         <div class="card">
-    
+
             <h3>Interested?</h3>
             <h4>Why not pay us a visit!</h4>
 
@@ -171,7 +183,11 @@
 
         </div>
 
+        
+
     </div>
+
+    <a class="back-to-btn" href="#"><img src="img/top.png" alt="Back to top"></a>
         
 
     <!-- Foooter -->
@@ -208,7 +224,6 @@
         }
 
         setInterval(showNextImage, 3000); // Change image every 3 seconds
-
     </script>
 
     <!-- Google translate script -->
@@ -219,10 +234,12 @@
                 'google_translate_element'
             );
         } 
+        
     </script>
 
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    
+    <!-- Section scroll script -->
+    <script type="text/javascript" src="history.js"></script>
 </body>
 </html>
