@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="footer.css">
     <style>
-        #container3D2 {
-            width: 100%;
-            height: 500px; /* Adjust the height as needed */
-        }
     </style>
 </head>
 <body>
@@ -32,6 +28,12 @@
             <li><button onclick="location.href='gallery.html'">Photo Gallery</button></li>
             <li><button onclick="location.href='about.html'">About Us</button></li>
         </ul>
+    </div>
+
+    <div class="translate">
+        <h3>Language</h3>
+        &nbsp;
+        <div id="google_translate_element"></div> 
     </div>
 
     <h1 class="title">About Us</h1>
@@ -131,6 +133,18 @@
 
     <!-- Script to handle navbar menu -->
     <script src="menu.js" type="module"></script>
+
+    <!-- Google translate script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

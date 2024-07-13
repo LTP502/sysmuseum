@@ -29,6 +29,12 @@
         </ul>
     </div>
 
+    <div class="translate">
+        <h3>Language</h3>
+        &nbsp;
+        <div id="google_translate_element"></div> 
+    </div>
+
     <h1 class="title">A Look Through The Museum's History</h1>
 
     <div class="main">
@@ -204,6 +210,18 @@
         setInterval(showNextImage, 3000); // Change image every 3 seconds
 
     </script>
+
+    <!-- Google translate script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     
 </body>

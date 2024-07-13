@@ -28,6 +28,12 @@
         </ul>
     </div>
 
+    <div class="translate">
+        <h3>Language</h3>
+        &nbsp;
+        <div id="google_translate_element"></div> 
+    </div>
+
     <center>
         <h1>Explore The Peranakan Heritage</h1>
         <table>
@@ -146,5 +152,17 @@
 
     <!-- Script to pick rooms and objects -->
     <script src="sections.js" type="module"></script>
+
+    <!-- Google translate script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

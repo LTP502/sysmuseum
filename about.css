@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: Raleigh, Arial, sans-serif;
-    background-color: #f4f1e9;
+    background-color: #ceb8a4;
     color: #8d3c38;
 }
 
@@ -23,7 +23,7 @@ body {
 #container3D2 {
     height: 26.190rem;
     position: relative;
-    width: 60%;
+    width: 70%;
     display: block;
     margin: 0 auto;
     overflow: hidden;

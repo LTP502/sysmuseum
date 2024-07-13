@@ -110,16 +110,19 @@
     margin-right: 10px;
 }
 
+/* Hide the "Powered by Google" text */
+#google_translate_element .goog-logo-link, 
+#google_translate_element .goog-te-gadget span, 
+#google_translate_element .goog-te-credit {
+    display: none !important;
+}
+
 .goog-te-gadget {
     color: transparent !important;
  }
 
 /* Hide the Google Translate frame */
 .goog-te-banner-frame.skiptranslate {
-    display: none !important;
-}
-
-.VIpgJd-ZVi9od-ORHb {
     display: none !important;
 }
 
