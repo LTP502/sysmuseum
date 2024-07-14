@@ -157,13 +157,13 @@ table button:hover {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%; /* Match the width of .container */
-    height: 500%; /* Match the height of .container */
+    height: 200%; /* Match the height of .container */
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 999;
 }
 
 /* Progress bar styling */

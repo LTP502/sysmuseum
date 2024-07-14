@@ -121,17 +121,20 @@ body {
 }
 
 .section-button {
-    background-color: #8d3c38;
-    color: #fff;
+    background-color: #f4f1e9;
+    color: #8d3c38;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     font-family: Raleigh;
     border-radius: 10px;
     width: 50%;
     place-self: center;
+    min-width: 60px;
+    min-height: 80px;
     margin: 10px;
+    justify-content: space-evenly;
+
 }
 
 .back-to-btn {
@@ -143,12 +146,22 @@ body {
     right: 5px;
     z-index: 9999;
     border-radius: 100%;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s, bottom 0.3s, right 0.3s;
+}
+
+.back-to-btn:hover{
+    width: 40px;
+    height: 40px;
+    bottom: 70px;
+    right: 10px;
 }
 
 .back-to-btn img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    place-content: center;
 }
 
 /* Media query for mobile view */
