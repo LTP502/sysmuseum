@@ -154,7 +154,7 @@ table button:hover {
 .progress-bar-container {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
     width: 100%; /* Match the width of .container */
     height: 200%; /* Match the height of .container */
@@ -187,6 +187,17 @@ table button:hover {
     padding: 10px;
     overflow: hidden;
 
+}
+
+.button {
+    background-color: #8d3c38;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Raleigh;
+    border-radius: 10px;
 }
 
 /* Media query for phoone view */

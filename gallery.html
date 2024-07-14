@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="loader.css">
 
     <style>
         .footer {
@@ -34,6 +35,20 @@
         </nav>
     </header>
 
+    <div class="progress-bar-container" id="loader">
+        <label class="progress-label" for="progress-bar">Loading 3D Explorer</label>
+        <br>
+        <progress id="progress-bar" value="0" max="100"></progress>
+        <br>
+        <label class="progress-label">
+            Loading too long?
+            <br>
+            Why not visit us!
+        </label>
+        <br>
+        <button class="button" onclick="location.href='about.html'">Find Us Here!</button>
+    </div>
+
     <div id="menu" class="menu">
         <ul>
             <li><button onclick="location.href='index.html'">Home</button></li>
@@ -50,7 +65,10 @@
         <div id="google_translate_element"></div> 
     </div>
 
+    
+
     <div class="container">
+
         <h1 class="title">Photo Gallery</h1>
 
         <div class="gallery">
@@ -161,9 +179,12 @@
                 'google_translate_element'
             );
         } 
+
     </script>
 
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <!-- Script to handle load bar -->
+    <script src="loader.js"></script>
 </body>
 </html>

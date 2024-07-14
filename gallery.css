@@ -8,12 +8,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ceb8a4;
     color: #8d3c38;
+    font-family: Raleigh;
 }
 
 .container {
     width: 90%;
     margin: auto;
     padding : 40px 0;
+    padding-top: 0px;
     height: 900px;
     text-align: center;
 }
@@ -23,8 +25,8 @@ title {
     text-align: center;
     font-size: 40px;
     font-weight: 900;
-    margin-bottom: 2rem;
-    font-family: Raleigh;
+    margin-top: 20px;
+    
 }
 
 .gallery {
