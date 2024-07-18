@@ -95,6 +95,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: radial-gradient(ellipse at center, #fff 40%, transparent 100%);
 }
 
 .translate h3{
