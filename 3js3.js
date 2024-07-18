@@ -68,10 +68,9 @@ const models = [
 
     {
         url: 'models/pick.glb', position: new THREE.Vector3(0, 0, 0), //adjust placement X,Y,Z here
-        scale: new THREE.Vector3(0.13, 0.13, 0.13),
+        scale: new THREE.Vector3(0.04, 0.04, 0.04),
         name: 'Please Choose',
         rotation: new THREE.Euler(0, 0, 0),
-        color: 0xf9f9f9
     },
 
     //Entrance

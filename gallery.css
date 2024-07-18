@@ -48,3 +48,14 @@ title {
     object-fit: cover;
     border-radius: 5px;
 }
+
+.button {
+    background-color: #8d3c38;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Raleigh;
+    border-radius: 10px;
+}
