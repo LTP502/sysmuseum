@@ -33,7 +33,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: #fff 5px solid;
     border-width: 1ch;
     border-radius: 30px;
     border-bottom: 0px;
@@ -111,7 +110,7 @@ body {
 }
 
 .video-container video{
-    width: 45vw;
+    width: 100%;
 }
 
 .button {
@@ -142,6 +141,6 @@ body {
     }
 
     .video-container video{
-        width: 70vw;
+        width: 100vw;
     }
 }

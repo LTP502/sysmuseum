@@ -3,7 +3,7 @@ let imageContainer = document.querySelector('.container3D2')
 
 //the initial lookat postition og the camera
 var lookAtPositions = [
-    new THREE.Vector3(10, -7, 35)
+    new THREE.Vector3(10, -6, 35)
 ];
 
 const infospot = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
@@ -15,6 +15,13 @@ const viewer = new PANOLENS.Viewer({
     container: imageContainer,
     autoRotate: false,
     controlBar: true,
+    cameraFov: 80,
+    controlConfig: {
+        'pan': true,
+        'zoom': true,
+        'rotate': true,
+        'fullscreen': true
+    }
 });
 
 panorama.addEventListener( 'enter-fade-start', function(){
@@ -22,5 +29,3 @@ panorama.addEventListener( 'enter-fade-start', function(){
   } );
 
 viewer.add( panorama );
-
-
