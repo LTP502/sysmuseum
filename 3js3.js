@@ -114,6 +114,13 @@ const models = [
         rotation: new THREE.Euler(0, 0, 0)
     },
 
+    {
+        url: 'models/pot.glb', position: new THREE.Vector3(20, -40, 0), 
+        scale: new THREE.Vector3(6, 6, 6),
+        name: 'Clay Pots',
+        rotation: new THREE.Euler(0, 0, 0)
+    },
+
     //Mid Section
 
     {
