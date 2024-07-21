@@ -2,7 +2,7 @@
 .progress-bar-container {
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 10%;
     transform: translate(-50%, -50%);
     width: 100%; /* Match the width of .container */
     height: 200%; /* Match the height of .container */

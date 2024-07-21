@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="menu.css">
@@ -71,7 +71,19 @@
 
         <h1 class="title">Photo Gallery</h1>
 
-        <div class="gallery">
+        <div class="quick-select">
+            <h3>Quick Select</h3>
+    
+            <div class="section-button-container">
+                <button class="section-button" data-value="gallery">Environment</button>
+                <button class="section-button" data-value="house">Texts</button>
+            </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+
+            <br>
+            <br>
 
             <!-- Col 1 -->
             <div class="column">
@@ -159,12 +171,6 @@
                 </div>
 
                 <div class="photo">
-                    <a href="img/calligraphy.jpg" data-lightbox="museum" data-title="Sun Yat Sen's Calligraphy.">
-                        <img src="img/calligraphy.jpg" alt="">
-                    </a>
-                </div>
-
-                <div class="photo">
                     <a href="img/contributers.jpg" data-lightbox="museum" data-title="Contributers to the Sun Yat Sen revolution.">
                         <img src="img/contributers.jpg" alt="">
                     </a>
@@ -222,6 +228,8 @@
         </div>
     </div>
     
+    <br>
+    <br>
 
     <!-- Foooter -->
     <footer> 
@@ -254,5 +262,23 @@
 
     <!-- Script to handle load bar -->
     <script src="loader.js"></script>
+
+    <!-- Section scroll script -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.section-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-value');
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

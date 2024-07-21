@@ -254,6 +254,21 @@
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- Section scroll script -->
-    <script type="text/javascript" src="history.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.section-button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetId = this.getAttribute('data-value');
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>
