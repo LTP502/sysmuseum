@@ -1,6 +1,4 @@
 import * as THREE from 'three'; // Adjust the path as needed
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js'; //importing OrbitControls
-
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; //to load models
 
 const infoCheckbox = document.getElementById('infoCheckbox');
@@ -31,7 +29,6 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(100, 100, 100); //the camera position (x, y, z)
 camera.lookAt(0, 0, 0);
 
-
 /* ---------------------------- Creating lights ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 //ambient light
 const ambientLight = new THREE.AmbientLight(0xffffff); //creating ambient light
@@ -54,13 +51,7 @@ directionalLight.shadow.camera.right = 50;
 directionalLight.shadow.camera.far = 100;
 directionalLight.shadow.camera.near = 0;
 
-/*directional light helper
-const dLightHelper = new THREE.DirectionalLightHelper(directionalLight); //creating directional light helper
-scene.add(dLightHelper); //to see the light source
-*/
-
-
-/* ---------------------------- Importing 3D models ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------- Importing 3D models (with spin)---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 //put models here
 const models = [
 
@@ -75,17 +66,31 @@ const models = [
 
     //Entrance
 
-    //Front Hall
-    
     {
-        url: 'models/chair.glb', position: new THREE.Vector3(20, 20, 0), 
-        scale: new THREE.Vector3(0.001, 0.001, 0.001),
-        name: 'Chairs',
-        rotation: new THREE.Euler(0, Math.PI / 2, 0)
+        url: 'models/greet.glb', position: new THREE.Vector3(0, 80, 0), //adjust placement X,Y,Z here
+        scale: new THREE.Vector3(0.38, 0.38, 0.38),
+        name: 'Nothing',
+        rotation: new THREE.Euler(-0.2, 0, 0),
     },
 
     {
-        url: 'models/sys_sculpture.glb', position: new THREE.Vector3(20, 40, 0), 
+        url: 'models/sys.glb', position: new THREE.Vector3(0, 80, 0), 
+        scale: new THREE.Vector3(3, 3, 3),
+        name: 'Welcome',
+        rotation: new THREE.Euler(0, 0, 0),
+    },
+
+    //Front Hall
+    
+    {
+        url: 'models/chair.glb', position: new THREE.Vector3(-20, 0, 0), 
+        scale: new THREE.Vector3(1.5, 1.5, 1.5),
+        name: 'Chairs',
+        rotation: new THREE.Euler(0, 0, 0),
+    },
+
+    {
+        url: 'models/sys_sculpture.glb', position: new THREE.Vector3(-40, 0, 0), 
         scale: new THREE.Vector3(5, 5, 5),
         name: 'Sculpture',
         rotation: new THREE.Euler(0, 0, 0),
@@ -94,61 +99,59 @@ const models = [
     //Second Hall
 
     {
-        url: 'models/safe.glb', position: new THREE.Vector3(20, -20, 0), 
+        url: 'models/safe.glb', position: new THREE.Vector3(0, 20, 0), 
         scale: new THREE.Vector3(5, 5, 5),
         name: 'The Safe',
         rotation: new THREE.Euler(0, 0, 0)
     },
 
     {
-        url: 'models/lacquerware.glb', position: new THREE.Vector3(40, -40, 0), 
+        url: 'models/lacquerware.glb', position: new THREE.Vector3(0, 40, 0), 
         scale: new THREE.Vector3(6, 6, 6),
         name: 'Lacquerware',
         rotation: new THREE.Euler(0, 0, 0)
     },
 
     {
-        url: 'models/portrait.glb', position: new THREE.Vector3(20, -40, 0), 
+        url: 'models/portrait.glb', position: new THREE.Vector3(0, 60, 0), 
         scale: new THREE.Vector3(6, 6, 6),
         name: 'Portraits',
         rotation: new THREE.Euler(0, 0, 0)
     },
 
     {
-        url: 'models/pot.glb', position: new THREE.Vector3(20, -40, 0), 
-        scale: new THREE.Vector3(6, 6, 6),
-        name: 'Clay Pots',
+        url: 'models/meeting_table.glb', position: new THREE.Vector3(0, -60, 0), 
+        scale: new THREE.Vector3(2, 2, 2),
+        name: 'Meeting Table',
         rotation: new THREE.Euler(0, 0, 0)
     },
 
     //Mid Section
-
-    {
-        url: 'models/table.glb', position: new THREE.Vector3(-20, -20, 0), 
-        scale: new THREE.Vector3(7, 7, 7),
-        name: 'Tables',
-        rotation: new THREE.Euler(0, 0, 0)
-    },
-
-    //Open Area
+    //chairs included already
 
     //Kitchen
     
     {
         //kettle
-        url: 'models/scene.gltf', position: new THREE.Vector3(-40, 0, 0),
+        url: 'models/scene.gltf', position: new THREE.Vector3(20, 0, 0),
         scale: new THREE.Vector3(20, 20, 20),
         name: 'Metal Pots & Pans',
         rotation: new THREE.Euler(0, 0, 0)
     }, 
 
     {
-        url: 'models/baskets.glb', position: new THREE.Vector3(0, 20, 0), 
+        url: 'models/baskets.glb', position: new THREE.Vector3(40, 0, 0), 
         scale: new THREE.Vector3(7, 7, 7),
         name: 'Baskets',
         rotation: new THREE.Euler(0, 0, 0)
     },
     
+    {
+        url: 'models/pot.glb', position: new THREE.Vector3(60, 0, 0), 
+        scale: new THREE.Vector3(6, 6, 6),
+        name: 'Clay Pots',
+        rotation: new THREE.Euler(0, 0, 0)
+    },
 
 ];
 
@@ -158,7 +161,7 @@ const loader = new GLTFLoader(manager);
 
 const modelsByName = new Map();
 
-// Function to load a model
+// Function to load a model as well as spin
 const loadModel = (index) => {
     const model = models[index];
     loader.load(model.url, function(glb) {

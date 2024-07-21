@@ -1,10 +1,9 @@
 // Define the object options for each room
 const roomObjects = {
-    entrance: ["Please Choose", "Entrance Design"],
-    'drawing-room': ["Please Choose", "Chairs", "Tables", "Sculpture"],
+    entrance: ["Please Choose", "Welcome"],
+    'drawing-room': ["Please Choose", "Chairs", "Sculpture"],
     'meeting-hall': ["Please Choose", "Portraits", "Meeting Table", "The Safe", "Lacquerware"],
-    'mid-section': ["Please Choose", "Desk", "Chairs"],
-    'open-area': ["Please Choose", "Toolbox", "Bicycle", "Car"],
+    'mid-section': ["Please Choose", "Chairs"],
     kitchen: ["Please Choose", "Clay Pots", "Metal Pots & Pans", "Baskets"]
 };
 
@@ -14,31 +13,24 @@ const descriptions = {
     //Pick an object description
     "Please Choose": "Please choose an object from the 'Select Object' dropdown.",
 
-    //Drawing room descriptions
+    //Entrance descriptions
+    "Welcome": "Welcome to Sun Yat Sen Museum Penang. This museum holds history of Sun Yat Sen when he was in Penang, gathering supporters for his revolution. This is the house that Sun Yat Sen held his meeting! So come on in and learn more about what he did around the world. ",
+
+    //First Hall descriptions
     "Chairs": "These are comfortable chairs suitable for any seating area.",
-    "Tables": "Sturdy tables that can be used for dining or working.",
-    "Sculpture": "Sun Yat Sen's own sculpture.",
+    "Sculpture": "Sculpture of Sun Yat Sen.",
 
+    //Second hall descriptions
 
-    // meeting hall descriptions
-
-    "Portraits": "Sun Yat Sen's wife's portrait.",
-    "Meeting Table": "A table that can be used for meeting purposes.",
-    "The Safe": "A safe that can be used for storing important documents.",
+    "Portraits": " A portrait of Sun Yat Sen's family member.",
+    "Meeting Table": "The meeting table that Sun Yat Sen had his revolution speech on. Took place in Penang.",
+    "The Safe": "Personal and confidential items used to be kept in it. Now it is but a huge heavy block of solid metal, displaying its sturdiness in the face of time and wear. Property of the previous house owner.",
     "Lacquerware": "Lacquerwares that can be used for decoration and storing items. Property of the previous house owners.",
 
-    // mid section descriptions
-
-    "Desk": "A desk that can be used for working or studying.",
+    //Stair Well descriptions
     "Chairs": "These are comfortable chairs suitable for any seating area.",
 
-    // open area descriptions
-
-    "Toolbox": "A toolbox that can be used for storing tools.",
-    "Bicycle": "A bicycle that can be used for transportation.",
-    "Car": "A car that can be used for transportation.",
-
-    // kitchen descriptions
+    //Kitchen descriptions
 
     "Clay Pots": "Clay pots that can be used for decoration.",
     "Metal Pots & Pans": "Metal pots and pans that can be used for cooking.",

@@ -35,22 +35,26 @@ table button:hover {
     background-color: #4b3e32;
 }
 
+
+/* Entrance */
 .S1 button {
-    background-color: #ffe6cc;
-    border: #d79b00 5px solid;
+    background-color: #b0d8ab;
+    border: #779773 5px solid;
     width: 100%;
     height: 80px;
     
 }
 
+/* First Hall */
 .S2 button {
-    background-color: #fff2cc;
-    border: #d6b656 5px solid;
+    background-color: #e97b48;
+    border: #a75732 5px solid;
     width: 100%;
     height: 120px;
+    color: #fff;
 }
 
-
+/* Second Hall */
 .S3 button {
     background-color: #dae8fc;
     border: #6c8ebf 5px solid;
@@ -58,30 +62,19 @@ table button:hover {
     height: 200px;
 }
 
+/* Stair Well */
 .S4 button {
-    background-color: #d5e8d4;
-    border: #82b366 5px solid;
+    background-color: #ee6863;
+    border: #912c28 5px solid;
     width: 100%;
     height: 60px;
+    color: #fff;
 }
 
+/* Kitchen */
 .S5 button {
-    background-color: #f8cecc;
-    border: #b85450 5px solid;
-    width: 100%;
-    height: 120px;
-}
-
-.S6 button {
-    background-color: #e1d5e7;
-    border: #9673a6 5px solid;
-    width: 100%;
-    height: 120px;
-}
-
-.S7 button {
-    background-color: #e1d5e7;
-    border: #9673a6 5px solid;
+    background-color: #dae8fc;
+    border: #6c8ebf 5px solid;
     width: 100%;
     height: 120px;
 }
