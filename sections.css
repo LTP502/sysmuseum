@@ -38,8 +38,8 @@ table button:hover {
 
 /* Entrance */
 .S1 button {
-    background-color: #b0d8ab;
-    border: #779773 5px solid;
+    background-color: #e9f16b;
+    border: #a4aa52 5px solid;
     width: 100%;
     height: 80px;
     
@@ -47,17 +47,17 @@ table button:hover {
 
 /* First Hall */
 .S2 button {
-    background-color: #e97b48;
-    border: #a75732 5px solid;
+    background-color: #b0d8ab;
+    border: #7cb974 5px solid;
     width: 100%;
     height: 120px;
-    color: #fff;
+    color: #000;
 }
 
 /* Second Hall */
 .S3 button {
-    background-color: #dae8fc;
-    border: #6c8ebf 5px solid;
+    background-color: #89ce80;
+    border: #52a846 5px solid;
     width: 100%;
     height: 200px;
 }

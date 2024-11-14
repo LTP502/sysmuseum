@@ -121,7 +121,7 @@ const models = [
 
     {
         url: 'models/meeting_table.glb', position: new THREE.Vector3(0, -60, 0), 
-        scale: new THREE.Vector3(2, 2, 2),
+        scale: new THREE.Vector3(1.2, 1.2, 1.2),
         name: 'Meeting Table',
         rotation: new THREE.Euler(0, 0, 0)
     },
